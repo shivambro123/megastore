@@ -1,0 +1,44 @@
+.hero-wrapper{
+    height: 70vh;
+    width: 100%;
+    background-image: url('E:\TryCatch\ecommerceapp\src\Component\images\megastore.jpg');  
+    background-size: cover;
+    background-position: center;   
+} 
+.content_wrapper{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 0 90px;
+    padding-top: 5.6rem;
+}  
+.cat_list{
+    width: 28.5%;
+    /* border: 1px solid; */
+    
+}
+.hero_content{
+    width: 68%;
+    /* border: 1px solid; */
+    text-align: left;
+    padding-left: 3.75rem;
+    max-width: 35%;
+}
+.hero_content h2{
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: 'Satoshi', sans-serif;
+}
+.hero-wrapper button{
+    padding: 10px 26px;
+    font-size: 14px;
+    font-weight: 800;
+    background-color: white;
+    border: none;
+}
+.hero-wrapper button:hover{
+    border: 2px solid;
+    outline: 3px solid black;
+    background-color: black;
+    color: white;
+}

@@ -1,0 +1,51 @@
+.trendpostwrapper{
+    padding: 10px 90px;
+    
+}
+.trendingPoster{
+    width: 100%;
+    height: 55vh;
+    background-color: white;
+}
+.trendpostheader{
+    padding: 10px 30px 0px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.trendcontent{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1.875rem;
+}
+.trendpostheader h3{
+    font-weight: 700;
+    font-size: 1.7rem;
+    color: black;   
+}
+.innerTrenPost{
+    height: 25vh;
+    width: 100%;
+    max-width: 30%;
+  
+}
+.trendimage{
+    height: 100%;
+    width: 100%;
+}
+.trendimgsize{
+    height: 100%;
+    width: 100%;
+}
+.trendpostdata{
+    height: 14vh;
+    width: 100%;
+    padding: 1.5625rem 0px 1.5625rem;
+    font-size: 16px;
+    font-family: 'Satoshi', sans-serif;
+
+}
+.trendpostdata h3{
+    font-size: 20px;
+    font-weight: 600;
+}

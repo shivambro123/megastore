@@ -1,0 +1,22 @@
+.catwrapper{
+    padding: 10px 90px;
+}
+.categorydiv{
+    background-color: white;
+    height: 70vh;
+    width: 100%;
+}
+.catheader{
+    padding: 10px 20px 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+}
+.catheader h3{
+    font-weight: 700;
+    font-size: 1.7rem;
+}
+.innercategoryWrapper{
+    display: flex;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,62 @@
+.postwrap{
+    padding: 10px 90px;
+}
+.posterwrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+} 
+.InnerPoster{
+    height: 25vh;
+    width: 100%;
+    max-width: 32%;
+    padding: 10px 17px;
+}
+.InnerPoster:hover button{
+    color: rgb(199, 194, 188);
+}
+
+.imag1{
+    background-image: url('E:\TryCatch\ecommerceapp\src\Component\images\megastore_banner_01.jpg');
+    background-position: center center;
+     background-size: cover;
+}
+.imag2{
+    background-image: url('E:\TryCatch\ecommerceapp\src\Component\images\megastore_banner_02.jpg');
+    background-position: center center;
+     background-size: cover;
+}.imag3{
+    background-image: url('E:\TryCatch\ecommerceapp\src\Component\images\megastore_banner_03.jpg');
+    background-position: center center;
+     background-size: cover;
+}
+.innercontent{
+    height: 100%;
+    width: 100%;
+    text-align: left;
+
+}
+.innercontent h2{
+    font-size: 1.4rem;
+    font-weight: 900;
+}
+.innercontent button{
+    margin-top: 2.8rem;
+    border: none;
+    padding: 3px 8px;
+    background-color: white;
+    font-size: 13px;    
+    font-weight: 600;
+    
+}   
+.sec h2{
+    font-size: 1.3rem;
+    font-weight: 900;
+}
+.sec p{
+    margin-top: 2rem;
+}
+.sec:hover p{
+    color: rgb(181, 176, 171);
+
+}

@@ -27,9 +27,9 @@ const CategoryComp = () => {
             <h3>Popular categories</h3>
           </div>
           <div>
-            <NavLink>
-              Shop all categories
-              <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            <NavLink className="nav-link text-color-black" >
+              Shop all categories{" "}
+              <i class="fa fa-caret-right " aria-hidden="true"></i>
             </NavLink>
           </div>
         </div>

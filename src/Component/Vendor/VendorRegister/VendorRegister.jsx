@@ -1,25 +1,27 @@
-import React  from "react";
+import React, { useEffect } from "react";
 import { Formik } from 'formik';
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import './AdminRegistercss.css'
-import { adminRegister } from "../../redux/Admin/Login/Action";
-const AdminRegister = () => {
+import './VendorRegistercss.css'
+import { registerUser } from "../../redux/Login/Action";
+import { vendorRegister } from "../../redux/Vendor/Action";
+const VendorRegister = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
 
   return (
     <div className='loginwrapper container'>    
     <div className='logindiv'>
         
-        <h1>Admin Create Account</h1>
+        <h1>Create Account for vendor</h1>
         <div className='formwrapper'>
-   
+ 
     <div className='createform'>
         <p>Sign-in Information</p>  
  
       <Formik
-        initialValues={{ name: "", email: "", password: "",confirm_password:"" }}
+        initialValues={{ name: "", email: "", password: "",confirm_password:"", category:"" , location: ""  }}
         validate={(values) => {
           const errors = {};
           if(!values.name){
@@ -40,8 +42,8 @@ const AdminRegister = () => {
         onSubmit={(values, { setSubmitting }) => {
           setTimeout(() => {
             // alert(JSON.stringify(values));
-            dispatch(adminRegister(values))
-            navigate('/admin-login')
+            dispatch(vendorRegister(values))
+            navigate('/vendor-login')
             setSubmitting(false);
           }, 400);
         }}
@@ -75,8 +77,8 @@ const AdminRegister = () => {
               placeholder="email"
             /><br/>
             {errors.email && touched.email && errors.email}<br/>
-            
-              <input
+
+                  <input
               type="password"
               name="password"
               onChange={handleChange}
@@ -85,6 +87,7 @@ const AdminRegister = () => {
               placeholder="password"
             /><br/>
             {errors.password && touched.password && errors.password}<br/>
+            
             <input
               type="password"
               name="confirm_password"
@@ -94,7 +97,17 @@ const AdminRegister = () => {
               placeholder="confirm_password"
             /><br/>
             {errors.confirm_password && touched.confirm_password && errors.confirm_password}<br/>
-            
+            <input
+              type="text"
+              name="location"
+              onChange={handleChange}
+              onBlur={handleBlur}
+              value={values.location}
+              placeholder="location"
+            /><br/>
+        
+            {errors.location && touched.location && errors.location}<br/>
+        
             <button type="submit" disabled={isSubmitting}>
               Register
             </button>
@@ -110,4 +123,4 @@ const AdminRegister = () => {
   );
 };
 
-export default AdminRegister;
+export default VendorRegister;

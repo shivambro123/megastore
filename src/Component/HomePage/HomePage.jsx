@@ -3,6 +3,7 @@ import HeroComp from '../Hero/HeroComp'
 import DisPoster from '../Discount/DisPoster'
 import CategoryComp from '../Category/CategoryComp'
 import TrendingPost from '../TrendingPoster/TrendingPost'
+import FeaturedProduct from '../FeaturedProducts/FeaturedProduct'
 
 const HomePage = () => {
   return (
@@ -11,6 +12,7 @@ const HomePage = () => {
   <DisPoster/>
   <CategoryComp/>
   <TrendingPost/>
+  <FeaturedProduct/>
     </>
   )
 }

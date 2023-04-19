@@ -1,0 +1,46 @@
+    .loginwrapper{
+        padding: 10px 80px;
+        height: 70vh;
+        width: 100%;
+
+    }
+    .logindiv{
+        background-color: white;
+        /* border: 1px solid; */
+        height: 100%;
+        width: 100%;
+
+    }
+    .formwrapper{
+    display: flex;
+    justify-content: center;
+        width: 100%;
+        height: 100%;
+        padding: 40px;
+    }
+
+    .loginform p{
+        font-size: 18px;
+    }
+    .createform{
+        text-align: center;
+     
+    
+    }
+    @media screen and (min-width:320px) and (max-width:480px){
+        .loginwrapper{
+            padding: 0px;
+            height: max-content;
+          
+        }
+        .formwrapper{
+            padding: 1.25rem;
+        }
+        .loginform{
+            flex: 0 0 100%;
+        }
+        .createform{
+            flex: 0 0 100%;
+
+        }
+    }

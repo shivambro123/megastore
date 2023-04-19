@@ -18,7 +18,7 @@
     
 }
 .hero_content{
-    width: 68%;
+    width: 100%;
     /* border: 1px solid; */
     text-align: left;
     padding-left: 3.75rem;
@@ -30,7 +30,7 @@
     font-family: 'Satoshi', sans-serif;
 }
 .hero-wrapper button{
-    padding: 10px 26px;
+    padding: 0.625rem 1.625rem;
     font-size: 14px;
     font-weight: 800;
     background-color: white;
@@ -41,4 +41,28 @@
     outline: 3px solid black;
     background-color: black;
     color: white;
+}
+
+@media screen and (min-width:320px) and (max-width:480px){
+    .hero-wrapper{
+        height: fit-content;
+    }
+    .content_wrapper{
+        padding: 3.75rem 1.25rem;
+    }
+    .hero_content h2{
+        font-size: 1.8rem;
+    }
+    .hero_content{
+        max-width: 100%;
+        padding: 0px;
+
+    }
+    .cat_list{
+        display: none;
+    }
+    .hero-wrapper button{
+        padding: 0.4rem 1.125rem;
+        font-size: 12px;
+    }
 }

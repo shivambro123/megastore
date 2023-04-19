@@ -1,0 +1,24 @@
+.dashwrapper{
+    border: 2px solid #bdb9b9;
+    border-radius: 30px;
+    background-color: white;
+    margin:10px auto; 
+}
+.userwrapper{
+    height: 90vh;
+    background-color: #dad3d3;
+}
+.userwrapper table{
+    overflow-wrap: anywhere;
+    /* overflow-x: scroll; */
+    
+}
+.vendorwrapper{
+    height: 90vh;
+
+    background-color: #d3cdcd;
+
+}
+.vendorwrapper table{
+    overflow-wrap: anywhere;
+}

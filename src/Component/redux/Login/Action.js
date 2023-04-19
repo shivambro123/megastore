@@ -16,7 +16,7 @@ export const getUsers = () =>{
     }
 } 
 
-export const Userlogin = (user) =>{
+export const Userlogin = (user,navigate) =>{
     return (dispatch)=>{
         dispatch({type:'LOGIN_INITIATED'})
         return axios.post('http://localhost:5000/user/login',user)
@@ -24,12 +24,18 @@ export const Userlogin = (user) =>{
             console.log(res)
             localStorage.setItem('Token',res.data.token)
             // localStorage.clear()
-        
-            return ({type:'LOGIN_SUCCESSFUL',payload:res.data})
+            
+            dispatch ({type:'LOGIN_SUCCESSFUL',payload:res.data})
+            if(res.status == 200){
+                navigate('/')
+            }
+            else{
+                navigate('/login')
+            }
         })
         .catch(err=>{
             console.log(err)
-            return ({type:'LOGIN_FAILED',payload:err})
+            dispatch ({type:'LOGIN_FAILED',payload:err})
         })
     }
 }

@@ -8,17 +8,10 @@ import './NavbarCompcss.css'
 import { useEffect, useState } from 'react';
 
 function NavbarComp() {
-  const [check,setCheck]=useState('')
-
-  useEffect(()=>{
-    setCheck(localStorage.getItem('Token'))
-    console.log(check)
-
-  },[check])
+  const [check,setCheck]=useState(localStorage.getItem('Token'));
 
   const logoutCLick = () =>{
     (localStorage.removeItem('Token'))
-    
   }
   return (
     <Navbar bg="light" expand="lg">
@@ -33,7 +26,7 @@ function NavbarComp() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav"> 
           <Nav className="ms-auto">
-           {(!check) ? <NavLink className="nav-link" to="/login">Sign In</NavLink>  : <NavLink className="nav-link" onClick={logoutCLick}>LogOut</NavLink> } 
+         {(!check) ? <NavLink className="nav-link" to="/login">Sign In</NavLink> :<NavLink className="nav-link" onClick={logoutCLick} to="/login">LogOut</NavLink>}  
             <NavLink className="nav-link" to="/cart">Cart</NavLink>
           </Nav>
         </Navbar.Collapse>

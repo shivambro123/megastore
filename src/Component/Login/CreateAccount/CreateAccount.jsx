@@ -10,14 +10,13 @@ const CreateAccount = () => {
 
 
   return (
+    <>
     <div className='loginwrapper container'>    
     <div className='logindiv'>
         
         <h1>Create Account</h1>
         <div className='formwrapper'>
-    <div className='loginform'>
-        <p>Personal Information</p>
-        </div>
+   
     <div className='createform'>
         <p>Sign-in Information</p>  
  
@@ -117,7 +116,7 @@ const CreateAccount = () => {
  
  </div>
 </div>
-
+</>
   );
 };
 

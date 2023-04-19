@@ -1,32 +1,31 @@
 import React, { useEffect } from 'react';
 import { Formik } from 'formik';
-import { Userlogin, getUsers } from '../redux/Login/Action';
 import {useDispatch, useSelector} from 'react-redux'
 import { NavLink, useNavigate } from 'react-router-dom';
-import './LoginCompcss.css'
+import './VendorLogincss.css'
+import { getVendor, vendorLogin } from '../../redux/Vendor/Action';
 
 
-const LoginComp = () => {
+const VendorLogin = () => {
   const navigate = useNavigate()
-  const userdata = useSelector(state=>state.user)
-  console.log(userdata)
    const dispatch = useDispatch()
-    useEffect(()=>{
-        dispatch(getUsers());
-    },[])
+    
+   useEffect(()=>{
+    dispatch(getVendor())
+   },[])
     return(
       <>
 
       <div className='loginwrapper container'>    
       <div className='logindiv'>
   
-          <h1>Login</h1>
+          <h1>Vendor Login</h1>
           <div className='formwrapper'>
       <div className='loginform'>
           <p>Registered Customers</p>
-          <span className='spantag'>If you have an account, sign in with your email address.</span>
+          <span>If you have an account, sign in with your email address.</span>
     <Formik
-      initialValues={{ email: 'swap@gmail.com', password: 'dahanu' }}
+      initialValues={{ email: '', password: '' }}
       validate={values => {
         const errors = {};
         if (!values.email) {
@@ -41,8 +40,7 @@ const LoginComp = () => {
       onSubmit={(values, { setSubmitting }) => {
         setTimeout(() => {
           // alert(JSON.stringify(values, null, 2));
-          dispatch(Userlogin(values,navigate))
-          
+      dispatch(vendorLogin(values,navigate));
           setSubmitting(false);
         }, 400);
       }}
@@ -58,23 +56,22 @@ const LoginComp = () => {
         /* and other goodies */
       }) => (
         <form onSubmit={handleSubmit}>
-          <label>Email <span style={{color:'red'}}>*</span></label><br/>
           <input
             type="email"
             name="email"
             onChange={handleChange}
             onBlur={handleBlur}
             value={values.email}
+            placeholder='email'
           /><br/>
           {errors.email && touched.email && errors.email}<br/>
-          <label>Password <span style={{color:'red'}}>*</span></label><br/>
-
           <input
             type="password"
             name="password"
             onChange={handleChange}
             onBlur={handleBlur}
             value={values.password}
+            placeholder='password'
           /><br/>
           {errors.password && touched.password && errors.password}<br/>
           <button type="submit" disabled={isSubmitting}>
@@ -86,9 +83,9 @@ const LoginComp = () => {
     </div>
 
     <div className='createform'>
-        <p className='title'>Create an Account</p>
-        <p>Sign up for early Sale access plus tailored new arrivals, trends and promotions.</p>
-      <button> <NavLink className="nav-link" to="/register">Create Account</NavLink></button>
+        <p>Create an Account</p>
+        <p>Sign up to earn more and deliver good quality</p>
+    <NavLink to="/vendor-register">Create Account</NavLink>
         
     </div>
   </div>
@@ -97,4 +94,4 @@ const LoginComp = () => {
   </>
 )};
 
-export default LoginComp;
+export default VendorLogin;

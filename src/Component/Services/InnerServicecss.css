@@ -1,0 +1,33 @@
+.innerservice{
+    width: 100%;
+    max-width: 25%;
+    /* border: 1px solid; */
+   height: 10vh;
+   display: flex;
+   padding: 5px;
+}
+.serviceicondiv{
+    /* border: 1px solid; */
+    flex:0 0 20%;
+    display: flex;
+    justify-content: center;
+   align-items: center;
+}
+.servicecontent{
+    /* border: 1px solid; */
+    flex:0 0 80%;
+    text-align: left;
+}
+.servicecontent p{
+    font-size: 13px;
+    color:#767474;
+    font-weight: 500;
+}
+
+@media screen and (min-width:320px) and (max-width:480px){
+    .innerservice{
+        max-width: 80%;
+        height: 25vh;
+        padding: 2px 0;
+    }
+}

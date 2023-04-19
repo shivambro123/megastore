@@ -4,6 +4,7 @@ import DisPoster from '../Discount/DisPoster'
 import CategoryComp from '../Category/CategoryComp'
 import TrendingPost from '../TrendingPoster/TrendingPost'
 import FeaturedProduct from '../FeaturedProducts/FeaturedProduct'
+import Services from '../Services/Services'
 
 const HomePage = () => {
   return (
@@ -13,6 +14,7 @@ const HomePage = () => {
   <CategoryComp/>
   <TrendingPost/>
   <FeaturedProduct/>
+  <Services/>
     </>
   )
 }

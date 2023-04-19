@@ -1,0 +1,11 @@
+.servicewrapper{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 90px;
+    width: 100%;
+}
+@media screen and (min-width:320px) and (max-width:480px){
+    .servicewrapper{
+        padding: 10px;
+    }
+}

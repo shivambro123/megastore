@@ -88,7 +88,7 @@ export default function NewAdminDash() {
                   <th>Name</th>
                   <th>Email</th>
                   <th>Location</th>
-                  <th>Password</th>
+              
                 </tr>
                 </thead>
                 <tbody>
@@ -100,7 +100,7 @@ export default function NewAdminDash() {
                         <td>{val.name}</td>
                         <td>{val.email}</td>
                         <td>{val.location}</td>
-                        <td>{val.password}</td>
+                       
                       </tr>
                     )
                   })
@@ -117,7 +117,7 @@ export default function NewAdminDash() {
                   <th>Name</th>
                   <th>Email</th>
                   <th>Location</th>
-                  <th>Password</th>
+                
                 </tr>
                 </thead>
                 <tbody>
@@ -129,7 +129,6 @@ export default function NewAdminDash() {
                         <td>{val.name}</td>
                         <td>{val.email}</td>
                         <td>{val.location}</td>
-                        <td>{val.password}</td>
                       </tr>
                     )
                   })

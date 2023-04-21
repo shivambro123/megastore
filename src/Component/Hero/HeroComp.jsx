@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import './HeroCompcss.css'
 const HeroComp = () => {
   return (
@@ -9,7 +10,7 @@ const HeroComp = () => {
         <div className='cat_list'></div>
         <div className='hero_content'><h2>The Purl Knit<br/>Cardigan</h2>
         <p>Here is your chance to upgrade your wardrobe with a variation.</p>
-        <button>SHOP THE LOOK</button></div>
+        <button><NavLink to="/shop" className="nav-link">SHOP THE LOOK</NavLink></button></div>
     </div>
     </div>
     </>

@@ -1,0 +1,47 @@
+.viewContainer{
+    padding: 10px 90px;
+}
+.viewWrapper{
+    width: 100%;
+    background-color: white;
+    height: 70vh;
+    display: flex;
+}
+.imagewrapper{
+    flex: 0 0 45%;
+    border: 1px solid #d4cccc;
+    padding: 40px;
+    height:100%;
+}
+.contanetwrapper{
+    flex: 0 0 50%;
+    border: 1px solid;
+    padding: 40px;
+    height:100%;
+    text-align: left;
+}
+.carousel-control-prev{
+    background-color: black;
+    height: 7vh;
+    margin: auto;
+    border-radius: 50%;
+
+}
+.carousel-control-next{
+    background-color: black;
+    height: 7vh;
+    margin: auto;
+    border-radius: 50%;
+}
+.carousel{
+    height: 50vh;
+
+}
+.crouselItem{
+    height: 50vh;
+    width: 100%;
+}
+.carouselimage{
+    height: 100%;
+    width: 100%;
+}

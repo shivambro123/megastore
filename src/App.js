@@ -17,6 +17,9 @@ import AdminRouter from './Component/Routing/AdminRouter';
 import VendorPrivateRoute from './Component/Routing/VendorPrivateRoute';
 import CheckNavbar from './Component/Navbar/CheckNavbar';
 import NewAdminDash from './Component/Admin/AdminDash/NewAdminDash';
+import ShopProduct from './Component/Shop/ShopProduct';
+import NotFound from './Component/Shop/NotFound/NotFound';
+import ViewSingleProduct from './Component/ViewSingle/ViewSingleProduct';
 
 function App() {
   return (
@@ -35,7 +38,9 @@ function App() {
         <Route path="/vendor-register" element={<VendorRegister/>}/>
         <Route path="/vendor-product" element={<VendorPrivateRoute><VenProducts/></VendorPrivateRoute>}/>
         <Route path="/admin-dashboard" element={<AdminRouter><NewAdminDash/></AdminRouter>}/>
-
+        <Route path="shop" element={<PrivateRouter><ShopProduct/></PrivateRouter>}/>
+        <Route path="/*" element={<NotFound/>}/>
+        <Route exact path="/viewsingleproduct/:prodID" element={<ViewSingleProduct/>}/>
       </Routes>
      </Router>
     </div>

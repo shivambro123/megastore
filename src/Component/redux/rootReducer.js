@@ -4,6 +4,7 @@ import categoryReducer from './Category/Reducer';
 import adminReducer from './Admin/Login/Reducer';
 import vendorReducer from './Vendor/Reducer';
 import featuredProductReducer from './FeturedProduct/Reducer';
+import singleProduct from './SingleProduct/Reducer';
 
 const rootReducer = combineReducers({
     user:loginReducer,
@@ -11,6 +12,7 @@ const rootReducer = combineReducers({
     admin:adminReducer,
     vendor:vendorReducer,
     featureproduct:featuredProductReducer,
+    singleProduct:singleProduct,
 })
 
 export default rootReducer;

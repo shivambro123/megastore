@@ -58,7 +58,7 @@ function AdminDash() {
                   <th>Id</th>
                   <th>Name</th>
                   <th>Email</th>
-                  <th>Password</th>
+                
                 </tr>
                 </thead>
                 <tbody>
@@ -69,7 +69,7 @@ function AdminDash() {
                         <td>{++ind}</td>
                         <td>{val.name}</td>
                         <td>{val.email}</td>
-                        <td>{val.password}</td>
+                        
                       </tr>
                     )
                   })
@@ -87,7 +87,7 @@ function AdminDash() {
                   <th>Id</th>
                   <th>Name</th>
                   <th>Email</th>
-                  <th>Password</th>
+              
                 </tr>
                 </thead>
                 <tbody>
@@ -98,7 +98,7 @@ function AdminDash() {
                         <td>{++ind}</td>
                         <td>{val.name}</td>
                         <td>{val.email}</td>
-                        <td>{val.password}</td>
+                     
                       </tr>
                     )
                   })

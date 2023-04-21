@@ -9,7 +9,7 @@ const featuredProductReducer = (state = initialState , action) =>{
                 ...state,
                 product:action.payload
             }
-        default:
+        default:        
             return state;
     }
 }

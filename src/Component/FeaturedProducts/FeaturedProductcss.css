@@ -12,7 +12,7 @@
 
 }
 .innerfeatproductcomp{
-    height: 37vh;
+    height: 39vh;
     width: 100%;
     max-width: 16.65%;
     border: 1px solid #ebe7e7;
@@ -64,11 +64,11 @@
     .innerfeatproductcomp{
         width: 100%;
         max-width: 80%;
-        height: 50vh;
+        height: 55vh;   
         margin: auto;
     }
     .Innercontentproduct{
-        height: 15vh;
+        height: 18vh;
     }
     .product-name{
         height: 10vh;

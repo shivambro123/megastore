@@ -25,19 +25,19 @@ const FeaturedProduct = () => {
             <h3>Featured Products</h3>
           </div>
           <div>
-            <NavLink className="nav-link text-color-black">
+            <NavLink className="nav-link text-color-black" to="/shop">
               Shop all categories{" "}
               <i class="fa fa-caret-right " aria-hidden="true"></i>
             </NavLink>
           </div>
         </div>
         <div className="innerfeatProductWrapper">
-          {featProduct?.map((val) => {
+          {featProduct?.slice(0,6).map((val) => {
             return (
               <div className="innerfeatproductcomp">
                 <div className="Innercontentproduct">
                   <img
-                    src={`${path}/${val.images[1]}`}
+                    src={`${path}/${val.thumbnail}`}
                     alt="catImage"
                     className="proImage"
                   />

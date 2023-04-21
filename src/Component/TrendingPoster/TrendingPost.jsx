@@ -15,7 +15,7 @@ const TrendingPost = () => {
               <h3>Trending Collection</h3>
             </div>
             <div>
-              <NavLink>
+              <NavLink to="/shop">
                 Shop all categories{" "}
                 <i class="fa fa-caret-right mx-2" aria-hidden="true"></i>
 

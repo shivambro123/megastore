@@ -1,5 +1,6 @@
 const initialState = {
     product:[],
+    cart:[]
 }
 
 const featuredProductReducer = (state = initialState , action) =>{
@@ -8,6 +9,16 @@ const featuredProductReducer = (state = initialState , action) =>{
             return {
                 ...state,
                 product:action.payload
+            }
+        case 'GET_CART':
+            return {
+                ...state,
+                cart:[...state.cart,action.payload]
+            }
+        case 'ADD_TOCART':
+            return {
+                ...state,
+                cart:[...state.cart,action.payload]
             }
         default:        
             return state;

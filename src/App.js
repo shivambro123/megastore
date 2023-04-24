@@ -20,6 +20,8 @@ import NewAdminDash from './Component/Admin/AdminDash/NewAdminDash';
 import ShopProduct from './Component/Shop/ShopProduct';
 import NotFound from './Component/Shop/NotFound/NotFound';
 import ViewSingleProduct from './Component/ViewSingle/ViewSingleProduct';
+import Footer from './Component/Footer/Footer';
+import Product from './Component/Product/Product';
 
 function App() {
   return (
@@ -34,14 +36,15 @@ function App() {
         <Route path="/vendor-login" element={<VendorLogin/>}/>
         <Route path="/cart" element={<PrivateRouter><CartComp/></PrivateRouter>}/>
         <Route path="/register" element={<CreateAccount/>}/>
-        <Route path="/admin-register" element={<AdminRegister/>}/>
+        <Route path="/admin-register" element={<AdminRegister/>}/>  
         <Route path="/vendor-register" element={<VendorRegister/>}/>
         <Route path="/vendor-product" element={<VendorPrivateRoute><VenProducts/></VendorPrivateRoute>}/>
         <Route path="/admin-dashboard" element={<AdminRouter><NewAdminDash/></AdminRouter>}/>
-        <Route path="shop" element={<PrivateRouter><ShopProduct/></PrivateRouter>}/>
+        <Route path="product" element={<PrivateRouter><Product/></PrivateRouter>}/>
         <Route path="/*" element={<NotFound/>}/>
-        <Route exact path="/viewsingleproduct/:prodID" element={<ViewSingleProduct/>}/>
+        <Route exact path="/viewsingleproduct/:prodID" element={<PrivateRouter><ViewSingleProduct/></PrivateRouter>}/>
       </Routes>
+      <Footer/>
      </Router>
     </div>
   );

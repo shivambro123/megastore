@@ -1,5 +1,6 @@
-import axios from 'axios'
-import { Navigate } from 'react-router-dom'
+import axios from 'axios';
+import { useState } from 'react';
+import { Navigate } from 'react-router-dom';
 export const getUsers = () =>{
     return (dispatch)=>{
         dispatch({type:'GET_INITIATED'})
@@ -19,15 +20,18 @@ export const getUsers = () =>{
 export const Userlogin = (user,navigate) =>{
     return (dispatch)=>{
         dispatch({type:'LOGIN_INITIATED'})
-        return axios.post('http://localhost:5000/user/login',user)
+        return axios.post('http://localhost:5000/user/login',user)  
         .then(res =>{   
-            console.log(res)
-            localStorage.setItem('Token',res.data.token)
-            // localStorage.clear()
+            console.log('res',res.data)
+            // localStorage.setItem('Token',res.data.token)
+            // localStorage.setItem('UserId',res.data)
+
+            localStorage.clear()
+
             
             dispatch ({type:'LOGIN_SUCCESSFUL',payload:res.data})
             if(res.status == 200){
-                navigate('/')
+                // navigate('/')
             }
             else{
                 navigate('/login')

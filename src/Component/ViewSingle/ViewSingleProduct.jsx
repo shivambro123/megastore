@@ -1,9 +1,14 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
+import Breadcrumb from "react-bootstrap/Breadcrumb";
 import { useParams } from 'react-router-dom'
 import { getSingleProduct } from '../redux/SingleProduct/Action';
 import Carousel from 'react-bootstrap/Carousel';
-import './ViewSingleProductcss.css'
+import './ViewSingleProductcss.css';
+import payment from '../Images/payment.png'
+import ShopMore from '../ShopMore/ShopMore';
+import Services from '../Services/Services';
+
 
 const ViewSingleProduct = () => {
     const singledata = useSelector(state=>state.singleProduct);
@@ -23,8 +28,15 @@ const ViewSingleProduct = () => {
   return (
     <>
     <div className='viewContainer container'>
+    <div className="py-3">
+          <Breadcrumb>
+            <Breadcrumb.Item href="/" className="bread">
+              Home
+            </Breadcrumb.Item>
+            <Breadcrumb.Item className="bread">View</Breadcrumb.Item>
+          </Breadcrumb>
+        </div>
         <div className='viewWrapper'>
-        
             <div className='imagewrapper'>
             <Carousel>
                 {
@@ -45,18 +57,31 @@ const ViewSingleProduct = () => {
     </Carousel>
     </div>
     <div className='contanetwrapper'>
-                <h3>{singleproductdata.name}</h3>
-                <h3>Rs. {singleproductdata.user_price}</h3>
-                <p>{singleproductdata.description}</p>
-                <div className='d-flex '>
-                    <div>- 1 +</div> 
-                    <div>- 1 +</div> 
-
+                <h3>{singleproductdata?.name}</h3>
+                <h3>Rs. {singleproductdata?.user_price}</h3>
+                <p>{singleproductdata?.description}</p>
+                <div className='ButtonWrapper'>
+                    <div className='quantity'><button>- </button> <span>1</span> <button>+</button></div> 
+                    <div className='addcartonebutton'> <button>Add to Cart</button></div> 
                     </div>
+            <div className='buynow'> <button>Buy It Now</button></div>
+            <hr></hr>
+            <div className='securecheckout'>
+              <div className='secureimage'>
+                <img
+                src={payment}
+                alt="payment"
+                />
+                </div>
+                <div className='slogan'>
+                  <h4>Guarantee safe & secure checkout</h4>
+                </div>
             </div>
             </div>
-           
-   
+            </div>
+                <ShopMore/>
+                <Services/>
+          
     </div>
     </>
   )

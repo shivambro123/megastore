@@ -4,6 +4,7 @@ import "./ShopProductcss.css";
 import SingleProduct from "./SingleProduct/SingleProduct";
 import { useDispatch, useSelector } from "react-redux";
 import { getfeaturedProduct } from "../redux/FeturedProduct/Action";
+import Services from "../Services/Services";
 
 const ShopProduct = () => {
   const dispatch = useDispatch()
@@ -83,6 +84,7 @@ const ShopProduct = () => {
             
           </div>
         </div>
+    
       </div>
     </>
   );

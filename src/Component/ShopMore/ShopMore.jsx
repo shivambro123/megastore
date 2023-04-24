@@ -2,10 +2,9 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { getfeaturedProduct } from "../redux/FeturedProduct/Action";
-import "./FeaturedProductcss.css";
-import { addCart } from "../redux/FeturedProduct/Action";
+import "./ShopMorecss.css";
 
-const FeaturedProduct = () => {
+const ShopMore = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -17,15 +16,9 @@ const FeaturedProduct = () => {
   const path = fetureProduct.product.path;
   console.log(path);
   console.log("feat", fetureProduct);
-
-  // add to cart
-
-  const addCartHandler = (val) =>{
-    dispatch(addCart(val))
-  }
   
   return (
-    <div className="productwrapper container">
+    <div className="showmorewrapper container">
       <div className="featproductdiv">
         <div className="catheader">
           <div>
@@ -39,9 +32,11 @@ const FeaturedProduct = () => {
           </div>
         </div>
         <div className="innerfeatProductWrapper">
-          {featProduct?.slice(0,6).map((val) => {
+          {featProduct?.slice(2,8).map((val) => {
             return (
               <div className="innerfeatproductcomp">
+                      <NavLink className="nav-link" to={`/viewsingleproduct/${val._id}`}>
+
                 <div className="Innercontentproduct">
                   <img
                     src={`${path}/${val.thumbnail}`}
@@ -50,13 +45,10 @@ const FeaturedProduct = () => {
                   />
                 </div>
                 <div className="product-detail">
-                <NavLink className="nav-link" to={`viewsingleproduct/${val._id}`}>
-
                   <div className="product-name">
                     {" "}
                     <h6>{val.name}</h6>
                   </div>
-
                   <div className="product-price">
                     <h6>
                       {" "}
@@ -64,16 +56,12 @@ const FeaturedProduct = () => {
                       {val.user_price}
                     </h6>
                   </div>
-                  </NavLink>
-              
                   <div className="productbutton">
-                    <button onClick={()=>addCartHandler(val)}>Add to Cart</button>
+                    <button>Add to Cart</button>
                   </div>
                 </div>
-           
-
+                </NavLink>
               </div>
-
             );
           })}
         </div>
@@ -82,4 +70,4 @@ const FeaturedProduct = () => {
   );
 };
 
-export default FeaturedProduct;
+export default ShopMore;

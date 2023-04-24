@@ -15,7 +15,6 @@
 }
 .contanetwrapper{
     flex: 0 0 50%;
-    border: 1px solid;
     padding: 40px;
     height:100%;
     text-align: left;
@@ -44,4 +43,104 @@
 .carouselimage{
     height: 100%;
     width: 100%;
+}
+.ButtonWrapper{
+    display: flex;
+    width: 100%;
+
+}
+.quantity{
+    flex: 1 1 30%;
+    /* border: 1px solid; */
+    padding: 8px 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #f7f7f7;
+    margin: 0 2px;
+    font-weight: 700;
+
+}
+.addcartonebutton{
+    flex:1 1 70%;
+    /* border:1px solid; */
+}   
+.quantity button{
+    border: none;
+    background: none;
+    font-size: 18px;
+}
+.addcartonebutton button{
+    width: 100%;
+    padding: 8px 2px;
+    border: 1px solid black;
+    font-weight: 700;
+    background:none;
+    
+}
+.addcartonebutton button:hover{
+    background-color: black;
+    color: white;
+}
+.buynow{
+    width: 100%;
+}
+.buynow button{
+    width: 100%;
+    padding: 8px 2px;
+    margin: 10px 0;
+    background-color: black;
+    color: white;
+    transition: all 0.2s;
+}
+.buynow button:hover{
+    padding: 10px 0 10px;
+}
+.securecheckout{
+    background-color: #f7f7f7;
+    padding: 16px 10px;
+    text-align: center;
+
+   
+}
+.slogan h4{
+    font-size: 18px;
+    font-weight: 500;
+    padding: 2px 0;
+}
+
+@media screen and (max-width:480px){
+    .viewContainer{
+        padding: 10px;
+    }
+    .viewWrapper{
+        flex-wrap: wrap;
+        height: max-content;
+    }
+    .imagewrapper{
+        flex:0 0 100%;
+        padding: 30px;
+    }
+    .contanetwrapper{
+        width: 100%;
+        padding: 0 4px;
+        height: 100vh;
+        
+    }
+    .contanetwrapper h3{
+        font-size: 1.3rem;
+    }
+    .contanetwrapper p{
+        font-size: 0.9rem;
+        padding: 0 10px;
+    }
+    .ButtonWrapper{
+        padding: 0 20px;
+    }
+    .securecheckout{
+        padding: 10px 0;
+    }
+    .securecheckout .secureimage{
+        padding: 4px 0;
+    }
 }

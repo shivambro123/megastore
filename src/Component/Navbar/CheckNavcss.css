@@ -179,7 +179,10 @@
     }
 
     .secondsearch .searchdiv {
-        height: 6vh;
+        height: 10vh;
+    }
+    .secondsearch .input_div{
+        height:12vh;
     }
 
 

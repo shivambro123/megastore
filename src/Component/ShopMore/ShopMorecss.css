@@ -1,0 +1,79 @@
+.showmorewrapper{
+    padding: 10px 0px;
+}
+.featproductdiv{
+    background-color: white;
+    height: max-content;
+    width: 100%;
+}
+.innerfeatProductWrapper{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.innerfeatproductcomp{
+    height: 39vh;
+    width: 100%;
+    max-width: 16.65%;
+    border: 1px solid #ebe7e7;
+    padding: 27px 10px;
+}
+.Innercontentproduct{
+    width: 100%;
+    max-width: 100%;
+   
+}
+.proImage{
+    height: 13vh;
+    width: 100%;
+    max-width: 70%;
+    border-radius: 50%;
+}
+
+
+.product-detail{
+    text-align: left;
+    padding: 10px 0px;
+}
+.product-name{
+    height: 7vh;
+    padding: 2px 0;
+}
+.product-price{
+    height: 5vh;
+    padding: 2px 0;
+}
+.productbutton{
+    width: 100%;
+}
+.productbutton button{
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    cursor: pointer;
+}
+.productbutton:hover button{
+    background-color: black;
+    color: white;
+}
+
+@media screen and (min-width:320px) and (max-width:480px){
+    .productwrapper{
+        padding: 0;
+    }
+    .innerfeatproductcomp{
+        width: 100%;
+        max-width: 80%;
+        height: 55vh;   
+        margin: auto;
+    }
+    .Innercontentproduct{
+        height: 18vh;
+    }
+    .product-name{
+        height: 10vh;
+    }
+    .product-price{
+        height: 10vh;
+    }
+}

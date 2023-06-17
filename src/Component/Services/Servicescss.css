@@ -9,3 +9,9 @@
         padding: 10px;
     }
 }
+
+@media screen and (max-width:1024px){
+    .servicewrapper{
+        padding: 0.625rem 0;
+    }
+}

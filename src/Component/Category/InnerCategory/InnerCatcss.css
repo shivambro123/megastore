@@ -13,12 +13,13 @@
     border-radius: 50%;
 }
 
-@media screen and (min-width:320px) and (max-width:480px){
+@media screen and (min-width:320px) and (max-width:880px){
     .innercatcomp{
-       max-width: 100%;
+        width: 100%;
+       max-width: 50%;
        height: 28vh;
        padding: 0;
-       margin: 5px 0;
+       margin: 0px 0;
     }
     .catImage{
         height: 17vh;

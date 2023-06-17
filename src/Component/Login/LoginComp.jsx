@@ -1,13 +1,18 @@
-import React, { useEffect } from 'react';
+import React, { useEffect,useState } from 'react';
 import { Formik } from 'formik';
 import { Userlogin, getUsers } from '../redux/Login/Action';
 import {useDispatch, useSelector} from 'react-redux'
 import { NavLink, useNavigate } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+import Toast from 'react-bootstrap/Toast';
 import './LoginCompcss.css'
 
 
 const LoginComp = () => {
   const navigate = useNavigate()
+  const [show, setShow] = useState(false);
   const userdata = useSelector(state=>state.user)
   console.log(userdata)
    const dispatch = useDispatch()
@@ -26,9 +31,12 @@ const LoginComp = () => {
           <p>Registered Customers</p>
           <span className='spantag'>If you have an account, sign in with your email address.</span>
     <Formik
-      initialValues={{ email: 'swap@gmail.com', password: 'dahanu' }}
+      initialValues={{ email: '', password: '' }}
       validate={values => {
         const errors = {};
+        if(!values.password){
+          errors.password = "Password is Required " 
+        }
         if (!values.email) {
           errors.email = 'Required';
         } else if (
@@ -42,7 +50,7 @@ const LoginComp = () => {
         setTimeout(() => {
           // alert(JSON.stringify(values, null, 2));
           dispatch(Userlogin(values,navigate))
-          
+          setShow(true)
           setSubmitting(false);
         }, 400);
       }}
@@ -65,6 +73,7 @@ const LoginComp = () => {
             onChange={handleChange}
             onBlur={handleBlur}
             value={values.email}
+            placeholder="Email"
           /><br/>
           {errors.email && touched.email && errors.email}<br/>
           <label>Password <span style={{color:'red'}}>*</span></label><br/>
@@ -75,6 +84,7 @@ const LoginComp = () => {
             onChange={handleChange}
             onBlur={handleBlur}
             value={values.password}
+            placeholder="password"
           /><br/>
           {errors.password && touched.password && errors.password}<br/>
           <button type="submit" disabled={isSubmitting}>
@@ -94,6 +104,18 @@ const LoginComp = () => {
   </div>
   </div>
   </div>
+  <Row className='toastmsg'>
+      <Col xs={6}>
+        <Toast onClose={() => setShow(false)} show={show} delay={2000} >
+          <Toast.Header>
+      
+          <small className='ms-auto'>ERROR</small>
+          </Toast.Header>
+          <Toast.Body className='toastbody'>{userdata.error}</Toast.Body>
+        </Toast>
+      </Col>
+     
+    </Row>
   </>
 )};
 

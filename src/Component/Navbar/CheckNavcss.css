@@ -1,11 +1,18 @@
+.fixeddiv{
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+    background-color: #fff;
+}
 .logosize {
     height: 50px;
     width: 100%;
 }
 
 .navbar {
-    padding: 5px 90px;
-    background-color: white;
+    padding: 0.3125rem 5.625rem;
+    background-color: #fff;
 }
 
 .input-div {
@@ -13,7 +20,6 @@
     height: 100%;
     width: 100%;
     max-width: 35rem;
-
     display: flex;
 
 }
@@ -21,7 +27,7 @@
 .input_div {
     height: 100%;
     width: 100%;
-    padding: 7px 5px;
+    padding: 0.4375rem 0.3125rem;
     display: flex;
 }
 
@@ -36,21 +42,21 @@
     /* max-width:5%; */
     border: none;
     outline: none;
-    padding: 8px 10px;
+    padding: 0.5rem 0.625rem;
 }
 
 /* .navdiv{
     align-items: ;
 } */
 .searchdiv {
-    height: 100%;
+    /* height: 100%; */
     width: 100%;
     max-width: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
-    color: white;
+    background-color: #000;
+    color: #fff;
     font-weight: 600;
 }
 
@@ -72,7 +78,7 @@
 
 .icon {
     font-size: 25px;
-    color: black;
+    color: #000;
 
 }
 
@@ -83,15 +89,15 @@
     width: 100%;
     max-width: 28.4%;
     height: 50px;
-    background-color: black;
-    color: white;
+    background-color: #000;
+    color: #fff;
     border-right: 1px solid #dad7d7;
     cursor: pointer;
 }
 
 .shop:hover {
-    background-color: white;
-    color: black;
+    background-color: #fff;
+    color: #000;
 }
 
 .shop h4 {
@@ -102,7 +108,7 @@
 .list {
     width: 100%;
     max-width: 40%;
-    margin-right: 220px;
+    margin-right: 13.75rem;
 }
 
 .list ul {
@@ -117,33 +123,31 @@
     font-weight: 700;
 }
 
-
-
 .overList {
-    height: 50vh;
+    height: max-content;
     width: 100%;
     max-width: 20.5%;
     position: absolute;
-    left: 204px;
-    background-color: white;
+    left: 12.75rem;
+    background-color: #fff;
     /* display: none; */
 }
 
 .overList ul {
     list-style-type: none;
-    margin: 0 20px;
+    margin: 0 1.25rem;
     padding: 0;
-}
+}   
 
 .overList ul li {
-    padding: 10px 5px;
-    /* background-color: black; */
+    padding: 0.625rem 0.3125rem;
+    /* background-color: #000; */
     border-bottom: 1px solid;
 }
 
 .overList ul li:hover {
-    background-color: black;
-    color: white;
+    background-color: #000;
+    color: #fff;
 }
 
 .listitem {
@@ -151,16 +155,35 @@
     font-weight: 600;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+.nav-item{
+    background-color: #a09999;
+    
+}
+/* .nav-link:active{
+    background-color: #000;
+
+} */
 
 .secondsearch {
     display: none;
 }
+.offcanvasbody{
+    display: none;
+}
+
+@media screen and (max-width:990px){
+    .offcanvasbody{
+        display: block;
+    }
+}
 
 @media screen and (min-width:320px) and (max-width:480px) {
     .navbar {
-        padding: 0;
+        padding:0.625rem 0;
     }
-
+    .navbar .formdiv{
+        display: none !important;
+    }
     .secondnav {
         display: none;
     }
@@ -169,7 +192,7 @@
         display: none;
     }
 
-    .secondsearch {
+    .secondsearch { 
         display: block;
     }
 
@@ -179,11 +202,39 @@
     }
 
     .secondsearch .searchdiv {
-        height: 10vh;
+        /* height: 100%; */
+        height: auto;
+        border-radius: 20px;
+
     }
     .secondsearch .input_div{
-        height:12vh;
+        border: 1px solid #e8e4e4;
+
     }
 
 
+}
+
+@media screen and (max-width:780px){
+    .navbar{
+        display: flex;
+        padding: 0;
+    }
+    .logosize{
+        width: 90%;
+    }
+    
+}
+
+@media screen and (max-width:1024px){
+    .navbar{
+    padding:0.625rem 0rem;
+    }
+}
+
+@media screen and (max-width:1024px){
+    .overList{
+        width: 26%;
+        left: 3rem;
+    }
 }

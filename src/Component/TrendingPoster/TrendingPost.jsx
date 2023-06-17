@@ -11,13 +11,13 @@ const TrendingPost = () => {
       <div className="trendpostwrapper container">
         <div className="trendingPoster">
           <div className="trendpostheader">
-            <div>
+            <div className="trend">
               <h3>Trending Collection</h3>
             </div>
-            <div>
+            <div className="shopcategory">
               <NavLink to="/shop">
-                Shop all categories{" "}
-                <i class="fa fa-caret-right mx-2" aria-hidden="true"></i>
+                Shop all categories
+                <i class="fa fa-caret-right mx-1" aria-hidden="true"></i>
 
               </NavLink>
             </div>

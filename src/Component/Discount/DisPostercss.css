@@ -1,73 +1,98 @@
-.postwrap{
+.postwrap {
     padding: 10px 90px;
 }
-.posterwrapper{
+
+.posterwrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-} 
-.InnerPoster{
-    height: 25vh;
+    color: #000;
+}
+
+.posterwrapper button {
+    color: #000;
+}
+
+.InnerPoster {
+    height: 11.25rem;
     width: 100%;
     max-width: 32%;
-    padding: 10px 17px;
+    padding: 0.625rem 1.0625rem;
 }
-.InnerPoster:hover button{
+
+.InnerPoster:hover button {
     color: rgb(199, 194, 188);
 }
 
-.imag1{
+.imag1 {
     background-image: url('E:\TryCatch\ecommerceapp\src\Component\images\megastore_banner_01.jpg');
     background-position: center center;
-     background-size: cover;
+    background-size: cover;
 }
-.imag2{
+
+.imag2 {
     background-image: url('E:\TryCatch\ecommerceapp\src\Component\images\megastore_banner_02.jpg');
     background-position: center center;
-     background-size: cover;
-}.imag3{
+    background-size: cover;
+}
+
+.imag3 {
     background-image: url('E:\TryCatch\ecommerceapp\src\Component\images\megastore_banner_03.jpg');
     background-position: center center;
-     background-size: cover;
+    background-size: cover;
 }
-.innercontent{
+
+.innercontent {
     height: 100%;
     width: 100%;
     text-align: left;
 
 }
-.innercontent h2{
+
+.innercontent h2 {
     font-size: 1.4rem;
     font-weight: 900;
 }
-.innercontent button{
+
+.innercontent button {
     margin-top: 2.8rem;
     border: none;
-    padding: 3px 8px;
+    padding: 0.1875rem 0.5rem;
     background-color: white;
-    font-size: 13px;    
+    font-size: 13px;
     font-weight: 600;
-    
-}   
-.sec h2{
+
+}
+
+.sec h2 {
     font-size: 1.3rem;
     font-weight: 900;
 }
-.sec p{
+
+.sec p {
     margin-top: 2rem;
 }
-.sec:hover p{
+
+.sec:hover p {
     color: rgb(181, 176, 171);
 
 }
-@media screen and (min-width:320px) and (max-width:480px){
-    .postwrap{
-     
-        padding: 20px 10px;
+
+@media screen and (min-width:320px) and (max-width:480px) {
+    .postwrap {
+
+        padding: 1.25rem 0.625rem;
     }
-    .InnerPoster{
+
+    .InnerPoster {
         height: max-content;
-        margin: 10px;
-       max-width: 100%;
+        margin: 0.625rem;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .postwrap {
+        padding: 0.625rem 0px;
     }
 }

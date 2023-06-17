@@ -39,7 +39,7 @@ export const adminLogin = (data,navigate) =>{
             localStorage.setItem('AdminToken',res.data.token)
             dispatch({type:'ADMLOGIN_SUCCESS',payload:res.data})
             if(res.status == 200){
-                navigate('/admin-dashboard');
+                navigate('/admin');
             }
             else{
                 navigate('/admin-login');

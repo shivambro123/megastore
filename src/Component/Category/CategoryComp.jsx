@@ -23,7 +23,7 @@ const CategoryComp = () => {
     <div className="catwrapper container">
       <div className="categorydiv">
         <div className="catheader">
-          <div>
+          <div className="cat">
             <h3>Popular categories</h3>
           </div>
           <div>

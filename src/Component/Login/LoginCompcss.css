@@ -1,6 +1,6 @@
 .loginwrapper{
     padding: 10px 80px;
-    height: 70vh;
+    height: 600px;
     width: 100%;
 
 }
@@ -65,7 +65,16 @@
     padding: 5px 0;
     border: none;
 }
-
+.toastmsg{
+    position: absolute;
+    top:0;
+    right: 0px;
+}
+.toastbody{
+    background-color: rgb(113, 119, 120);
+    color: red;
+    font-weight: 700;
+}
 @media screen and (min-width:320px) and (max-width:480px){
     .loginwrapper{
         padding: 0px;

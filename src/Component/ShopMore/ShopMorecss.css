@@ -53,17 +53,17 @@
     cursor: pointer;
 }
 .productbutton:hover button{
-    background-color: black;
+    /* background-color: black; */
     color: white;
 }
 
 @media screen and (min-width:320px) and (max-width:480px){
-    .productwrapper{
+    /* .productwrapper{
         padding: 0;
-    }
+    } */
     .innerfeatproductcomp{
         width: 100%;
-        max-width: 80%;
+        max-width: 50%;
         height: 55vh;   
         margin: auto;
     }

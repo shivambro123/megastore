@@ -1,6 +1,7 @@
 const initialState = {
     users:[],
     user:{},
+    error:null,
 }
 
 const loginReducer = (state = initialState , action)=>{
@@ -14,6 +15,11 @@ const loginReducer = (state = initialState , action)=>{
             return {
                 ...state,
                 user:action.payload
+            }
+        case 'LOGIN_FAILED':
+           return  {
+         
+               error:action.payload,
             }
         default:
             return state;

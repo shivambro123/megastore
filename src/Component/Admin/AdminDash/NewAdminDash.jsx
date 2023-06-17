@@ -7,6 +7,11 @@ import Box from '@mui/material/Box';
 import { useDispatch, useSelector } from 'react-redux';
 import { getVendor } from '../../redux/Vendor/Action';
 import { getUsers } from '../../redux/Login/Action';
+import AdminCategory from './AdminCategory';  
+import './AdminDashcss.css';
+import { getCategory } from '../../redux/Category/Action';
+import axios from 'axios';
+import AdminProduct from './AdminProduct';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -43,7 +48,7 @@ function a11yProps(index) {
 
 export default function NewAdminDash() {
   const [value, setValue] = React.useState(0);
-
+  const [check,setCheck] = React.useState([])
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -52,6 +57,9 @@ export default function NewAdminDash() {
     dispatch(getVendor());
     dispatch(getUsers());
   },[])
+
+
+  
   const userdata = useSelector(state =>state.user)
   console.log(userdata);
   const uservalue = userdata.users.data;
@@ -60,8 +68,10 @@ export default function NewAdminDash() {
   const vendorvalue = vendordata.vendors.data;
   console.log(vendordata);
   return (
+    <>
+    <div className='Adminwrapper'>
     <Box
-      sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', height: 424 }}
+      sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', height: 'auto' }}
     >
       <Tabs
         orientation="vertical"
@@ -73,8 +83,8 @@ export default function NewAdminDash() {
       >
         <Tab label="Users" {...a11yProps(0)} />
         <Tab label="vendors" {...a11yProps(1)} />
-        <Tab label="Item Three" {...a11yProps(2)} />
-        <Tab label="Item Four" {...a11yProps(3)} />
+        <Tab label="Category" {...a11yProps(2)} />
+        <Tab label="Product" {...a11yProps(3)} />
         <Tab label="Item Five" {...a11yProps(4)} />
         <Tab label="Item Six" {...a11yProps(5)} />
         <Tab label="Item Seven" {...a11yProps(6)} />
@@ -88,7 +98,6 @@ export default function NewAdminDash() {
                   <th>Name</th>
                   <th>Email</th>
                   <th>Location</th>
-              
                 </tr>
                 </thead>
                 <tbody>
@@ -117,7 +126,6 @@ export default function NewAdminDash() {
                   <th>Name</th>
                   <th>Email</th>
                   <th>Location</th>
-                
                 </tr>
                 </thead>
                 <tbody>
@@ -137,10 +145,10 @@ export default function NewAdminDash() {
               </table>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Item Three
+        <AdminCategory/>
       </TabPanel>
       <TabPanel value={value} index={3}>
-        Item Four
+        <AdminProduct/>
       </TabPanel>
       <TabPanel value={value} index={4}>
         Item Five
@@ -152,5 +160,7 @@ export default function NewAdminDash() {
         Item Seven
       </TabPanel>
     </Box>
+    </div>
+    </>
   );
 }

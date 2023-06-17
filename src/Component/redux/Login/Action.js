@@ -23,23 +23,26 @@ export const Userlogin = (user,navigate) =>{
         return axios.post('http://localhost:5000/user/login',user)  
         .then(res =>{   
             console.log('res',res.data)
-            // localStorage.setItem('Token',res.data.token)
-            // localStorage.setItem('UserId',res.data)
+            localStorage.setItem('Token',res.data.token)
+            localStorage.setItem('UserId',res.data.data._id)
 
-            localStorage.clear()
-
+            // localStorage.clear()
             
             dispatch ({type:'LOGIN_SUCCESSFUL',payload:res.data})
             if(res.status == 200){
-                // navigate('/')
+                navigate('/')
+            }
+            if(res.status == 400){
+                console.log(res.response)
+                navigate('/login')
             }
             else{
-                navigate('/login')
+                // navigate('/login')
             }
         })
         .catch(err=>{
-            console.log(err)
-            dispatch ({type:'LOGIN_FAILED',payload:err})
+            console.log(err.response.data.message)
+            dispatch ({type:'LOGIN_FAILED',payload:err.response.data.message})
         })
     }
 }

@@ -1,14 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
-import { getfeaturedProduct } from "../redux/FeturedProduct/Action";
+import { addCart, getfeaturedProduct } from "../redux/FeturedProduct/Action";
 import "./ShopMorecss.css";
 
 const ShopMore = () => {
   const dispatch = useDispatch();
+  const [userId,setUserId]=useState(null)
 
   useEffect(() => {
     dispatch(getfeaturedProduct());
+    setUserId(localStorage.getItem('UserId'));
+
   }, []);
   const fetureProduct = useSelector((state) => state.featureproduct);
   const featProduct = fetureProduct.product.data;
@@ -16,7 +19,11 @@ const ShopMore = () => {
   const path = fetureProduct.product.path;
   console.log(path);
   console.log("feat", fetureProduct);
-  
+
+  const AddtoCart = (valId,userId) =>{
+    dispatch(addCart(valId,userId));
+
+  }
   return (
     <div className="showmorewrapper container">
       <div className="featproductdiv">
@@ -57,7 +64,7 @@ const ShopMore = () => {
                     </h6>
                   </div>
                   <div className="productbutton">
-                    <button>Add to Cart</button>
+                    <button onClick={()=>{AddtoCart(val._id,userId)}}>Add to Cart</button>
                   </div>
                 </div>
                 </NavLink>

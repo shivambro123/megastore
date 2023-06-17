@@ -1,102 +1,122 @@
-.shopContainer{
-    padding: 10px 90px;
+.shopContainer {
+    padding: 0.625rem 5.625rem;
 }
-.shopwrapper{
+
+.shopwrapper {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     height: max-content;
-  
+
 }
-.bread{
+
+.bread {
     text-decoration: none;
 }
-.filterdiv{
-  
+
+.filterdiv {
+
     height: 100vh;
-    flex:0 0 25%;
+    flex: 0 0 25%;
     height: 100vh;
     text-align: left;
     display: flex;
     flex-direction: column;
-
- 
 }
-.filterinnerdiv{
+
+.filterinnerdiv {
     background-color: white;
-    padding: 20px;
+    padding: 1.25rem;
     height: 60vh;
+}
 
-}
-.wishlist{
+.wishlist {
     height: 20vh;
-    margin: 20px 0;
+    margin: 1.25rem 0;
     background-color: white;
-    padding: 20px;
+    padding: 1.25rem;
 }
-.wishlist h5{
+
+.wishlist h5 {
     padding-bottom: 1rem;
 }
 
 
-.shopheader{
-    padding-bottom: 10px;
+.shopheader {
+    padding-bottom: 0.625rem;
     border-bottom: 1px solid #8b8888;
 }
-.shopprice{
- 
-    padding: 10px 0;
+
+.shopprice {
+
+    padding: 0.625rem 0;
     border-bottom: 1px solid #8b8888;
 }
-.selectdiv{
+
+.selectdiv {
     display: flex;
     justify-content: center;
     padding-bottom: 20px;
 }
-.selectdiv select{
+
+.selectdiv select {
     border: none;
     width: 50%;
     padding: 4px 0;
     border-bottom: 2px solid;
 }
 .selectdiv select:active{
-    border: none;
-    outline: none;
+
 }
-.shopbrand{
-    
+.selectdiv select:focus{
+
+  border: none;
+
 }
-.shopbrand .inputdiv{
+
+
+.shopbrand .inputdiv {
     display: block;
     padding: 5px 0;
 }
-.productdiv{
+
+.productdiv {
     height: max-content;
     background-color: white;
     flex: 0 0 70%;
-   margin: auto;
-  
+    margin: 0 auto;
+
 }
-.product-header{
+
+.product-header {
     border-bottom: 1px solid #8b8888;
-    padding:10px 20px 20px;
+    padding: 0.625rem 1.25rem 1.25rem;
     text-align: left;
 
 }
 
-@media screen and (max-width:480px){
-    .shopContainer{
+@media screen and (max-width:480px) {
+    .shopContainer {
         padding: 10px;
     }
-    .filterdiv{
+
+    .filterdiv {
         display: none;
     }
-    .productdiv{
-        flex:0 0 100%;
+
+    .productdiv {
+        flex: 0 0 100%;
         height: max-content;
     }
-    .product-header{
+
+    .product-header {
         padding: 10px;
     }
-   
+
+}
+
+@media screen and (max-width:1024px){
+    .shopContainer{
+        padding: 0;
+    }
 }

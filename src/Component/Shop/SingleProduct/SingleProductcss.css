@@ -5,7 +5,7 @@
     width: 100%;
 }
 .singleproductdiv{
-    height: 37vh;
+    /* height: 37vh; */
     width: 100%;
     max-width: 25%;
     padding: 20px;
@@ -45,7 +45,7 @@
 @media screen and (max-width:480px){
     .singleproductdiv{
         max-width: 50%;
-        height: 40vh;
+        height: max-content;
     }
     .singleproductdiv{
         padding: 10px 5px;

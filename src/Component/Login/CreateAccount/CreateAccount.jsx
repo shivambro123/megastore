@@ -35,7 +35,7 @@ const CreateAccount = () => {
             errors.email = "Invalid email address";
           }
           if(!values.password){
-            errors.password = "Contact is required";
+            errors.password = "Password is required";
           }
           return errors;
         }}

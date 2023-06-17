@@ -123,8 +123,9 @@
     }
     .contanetwrapper{
         width: 100%;
-        padding: 0 4px;
-        height: 100vh;
+        /* padding: 0 4px; */
+        padding: 2px auto;
+        height: max-content;
         
     }
     .contanetwrapper h3{
@@ -142,5 +143,11 @@
     }
     .securecheckout .secureimage{
         padding: 4px 0;
+    }
+}
+
+@media screen and (max-width:1024px){
+    .viewContainer{
+        padding: 0;
     }
 }
